@@ -1,5 +1,5 @@
-import { loadEnvFile } from 'node:process';
-loadEnvFile();
+import dotenv from 'dotenv';
+dotenv.config();
 
 import mongoose from 'mongoose';
 

@@ -1,10 +1,10 @@
-import { loadEnvFile } from 'node:process';
+import dotenv from 'dotenv';
 import { jwtVerify } from 'jose';
 import User from '../models/User.js';
 import { JWT_SECRET } from '../utils/getJwtSecret.js';
 import { generateToken } from '../utils/generateToken.js';
 
-loadEnvFile();
+dotenv.config();
 
 // @route         POST api/auth/register
 // @description   Register new user

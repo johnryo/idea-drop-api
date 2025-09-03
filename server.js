@@ -1,4 +1,4 @@
-import { loadEnvFile } from 'node:process';
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -7,7 +7,7 @@ import authRouter from './routes/authRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import connectDB from './config/db.js';
 
-loadEnvFile();
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;

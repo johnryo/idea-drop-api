@@ -1,9 +1,9 @@
-import { loadEnvFile } from 'node:process';
+import dotenv from 'dotenv';
 import { jwtVerify } from 'jose';
 import User from '../models/User.js';
 import { JWT_SECRET } from '../utils/getJwtSecret.js';
 
-loadEnvFile();
+dotenv.config();
 
 export const protect = async (req, res, next) => {
   try {
